@@ -1,0 +1,26 @@
+<div class="weather-app">
+    <h1>Weather App</h1>
+    <h2>Location: {{ location }}</h2>
+  
+    <table class="weather-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+            <th>Wind Velocity (km/h)</th>
+            <th>Condition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let day of weatherData">
+            <td>{{ day.day }}</td>
+            <td>{{ day.temperature }}</td>
+            <td>{{ day.humidity }}</td>
+            <td>{{ day.windVelocity }}</td>
+            <td>{{ day.condition }}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  
