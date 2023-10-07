@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class WeatherComponent {
   location = 'Aarhus';
   // Have chosen to accept the code duplication since this is just dummy data.
+  // Randomize values
   weatherData: any[] = [
     {
       day: 'Today',
@@ -77,7 +78,7 @@ export class WeatherComponent {
       'Partly Cloudy',
       'Cloudy',
       'Rainy',
-      'Thunderstorms',
+      'Thunderstorm',
       'Foggy',
     ];
     const randomIndex = Math.floor(Math.random() * conditions.length);

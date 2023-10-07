@@ -1,26 +1,82 @@
 <div class="weather-app">
     <h1>Weather App</h1>
     <h2>Location: {{ location }}</h2>
-  
+
     <table class="weather-table">
         <thead>
-          <tr>
-            <th>Day</th>
-            <th>Temperature (°C)</th>
-            <th>Humidity (%)</th>
-            <th>Wind Velocity (km/h)</th>
-            <th>Condition</th>
-          </tr>
+            <tr>
+                <th>Day</th>
+                <th>Condition</th>
+                <th>Temperature (°C)</th>
+                <th>Humidity (%)</th>
+                <th>Wind Velocity (km/h)</th>
+            </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let day of weatherData">
-            <td>{{ day.day }}</td>
-            <td>{{ day.temperature }}</td>
-            <td>{{ day.humidity }}</td>
-            <td>{{ day.windVelocity }}</td>
-            <td>{{ day.condition }}</td>
-          </tr>
+            <tr *ngFor="let day of weatherData">
+                <td>{{ day.day }}</td>
+                <td>{{ day.condition }}</td>
+                <td>{{ day.temperature }}</td>
+                <td>{{ day.humidity }}</td>
+                <td>{{ day.windVelocity }}</td>
+            </tr>
         </tbody>
     </table>
-  </div>
-  
+
+    <table class="weather-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Today</th>
+                <th>Day 2</th>
+                <th>Day 3</th>
+                <th>Day 4</th>
+                <th>Day 5</th>
+                <th>Day 6</th>
+                <th>Day 7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Condition</td>
+                <td>{{ weatherData[0].condition }}</td>
+                <td>{{ weatherData[1].condition }}</td>
+                <td>{{ weatherData[2].condition }}</td>
+                <td>{{ weatherData[3].condition }}</td>
+                <td>{{ weatherData[4].condition }}</td>
+                <td>{{ weatherData[5].condition }}</td>
+                <td>{{ weatherData[6].condition }}</td>
+            </tr>
+            <tr>
+                <td>Temperature (°C)</td>
+                <td>{{ weatherData[0].temperature }}</td>
+                <td>{{ weatherData[1].temperature }}</td>
+                <td>{{ weatherData[2].temperature }}</td>
+                <td>{{ weatherData[3].temperature }}</td>
+                <td>{{ weatherData[4].temperature }}</td>
+                <td>{{ weatherData[5].temperature }}</td>
+                <td>{{ weatherData[6].temperature }}</td>
+            </tr>
+            <tr>
+                <td>Humidity (%)</td>
+                <td>{{ weatherData[0].humidity }}</td>
+                <td>{{ weatherData[1].humidity }}</td>
+                <td>{{ weatherData[2].humidity }}</td>
+                <td>{{ weatherData[3].humidity }}</td>
+                <td>{{ weatherData[4].humidity }}</td>
+                <td>{{ weatherData[5].humidity }}</td>
+                <td>{{ weatherData[6].humidity }}</td>
+            </tr>
+            <tr>
+                <td>Wind Velocity (km/h)</td>
+                <td>{{ weatherData[0].windVelocity }}</td>
+                <td>{{ weatherData[1].windVelocity }}</td>
+                <td>{{ weatherData[2].windVelocity }}</td>
+                <td>{{ weatherData[3].windVelocity }}</td>
+                <td>{{ weatherData[4].windVelocity }}</td>
+                <td>{{ weatherData[5].windVelocity }}</td>
+                <td>{{ weatherData[6].windVelocity }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
